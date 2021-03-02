@@ -34,8 +34,8 @@
       "language": "Idioma"
     },
     "form": {
-      "username.label": "Usuario",
-      "username.placeholder": "Nombre de usuario",
+      "username.label": "Telefono",
+      "username.placeholder": "Su Telefono",
       "currentpassword.label": "Contraseña actual",
       "currentpassword.placeholder": "Contraseña actual",
       "newpassword.label": "Nueva contraseña",

@@ -2,12 +2,13 @@
   "register": {
     "title": "Registro",
     "form": {
-      "button": "Crear la cuenta"
+      "button": "Crear la cuenta",
+      "addPicture": "Agregar foto de perfil"
     },
     "messages": {
       "validate": {
         "login": {
-          "required": "Su nombre de usuario es obligatorio.",
+          "required": "Su telefono es obligatorio.",
           "minlength": "Su nombre de usuario debe tener al menos 1 caracter.",
           "maxlength": "Su nombre de usuario no puede tener más de 50 caracteres.",
           "pattern": "Your username is invalid."
@@ -16,7 +17,7 @@
       "success": "<strong>¡Registro guardado!</strong> Por favor, revise su correo electrónico para confirmar.",
       "error": {
         "fail": "<strong>¡El registro ha fallado!</strong> Por favor, inténtelo de nuevo más tarde.",
-        "userexists": "<strong>¡El nombre de usuario ya está registrado!</strong> Por favor, escoja otro usuario.",
+        "userexists": "<strong>¡Ese telefono ya está registrado!</strong> Por favor, escoja otro telefono o recupere la contrasena.",
         "emailexists": "<strong>¡El correo electrónico ya está en uso!</strong> Por favor, escoja otro email."
       }
     }

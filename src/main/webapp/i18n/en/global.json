@@ -34,8 +34,8 @@
       "language": "Language"
     },
     "form": {
-      "username.label": "Username",
-      "username.placeholder": "Your username",
+      "username.label": "Phone",
+      "username.placeholder": "Your phone",
       "currentpassword.label": "Current password",
       "currentpassword.placeholder": "Current password",
       "newpassword.label": "New password",
