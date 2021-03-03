@@ -3,7 +3,8 @@
     "title": "Registro",
     "form": {
       "button": "Crear la cuenta",
-      "addPicture": "Agregar foto de perfil"
+      "addPicture": "Agregar foto de perfil",
+      "changePicture": "Cambiar foto de perfil"
     },
     "messages": {
       "validate": {

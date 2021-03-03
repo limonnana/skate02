@@ -1,1 +1,25 @@
-<p> {{login }}!</p>
+<h3 jhiTranslate="picture.addPicture">Add Profile Picture</h3>
+<br><br>
+
+<input type="file" (change)="fileChangeEvent($event)" />
+
+<img [src]="croppedImage" />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<button type="button" id="addPicture" class="btn btn-primary" *ngIf="croppedImage" (click)="savePicture()">
+    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="picture.savePicture">Save picture</span>
+</button>
+
+<image-cropper
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="true"
+    [aspectRatio]="4 / 4"
+    [resizeToWidth]="128"
+    [roundCropper]=true
+    format="png"
+    (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()"
+    (cropperReady)="cropperReady()"
+    (loadImageFailed)="loadImageFailed()"
+></image-cropper>
+
+

@@ -14,6 +14,7 @@ export class SettingsComponent implements OnInit {
   account!: Account;
   success = false;
   languages = LANGUAGES;
+  profilePicture?: string;
   settingsForm = this.fb.group({
     firstName: [undefined, [Validators.required, Validators.minLength(1), Validators.maxLength(50)]],
     lastName: [undefined, [Validators.required, Validators.minLength(1), Validators.maxLength(50)]],
@@ -26,6 +27,7 @@ export class SettingsComponent implements OnInit {
   ngOnInit(): void {
     this.accountService.identity().subscribe(account => {
       if (account) {
+        this.profilePicture = account.picture;
         this.settingsForm.patchValue({
           firstName: account.firstName,
           lastName: account.lastName,

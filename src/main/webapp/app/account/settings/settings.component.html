@@ -1,5 +1,4 @@
 <div>
-    <a routerLink="../{{account.login}}/picture">El link</a>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <h2 jhiTranslate="settings.title" [translateValues]="{ username: account.login }" *ngIf="account">User settings for: <b>{{ account.login }}</b></h2>
@@ -9,6 +8,12 @@
             </div>
 
             <jhi-alert-error></jhi-alert-error>
+          
+
+                <div *ngIf='profilePicture'>
+                    <img [src]="profilePicture" class="img-thumbnail"> 
+                      <br> <br>
+                </div>
 
             <form name="form" role="form" (ngSubmit)="save()" [formGroup]="settingsForm" *ngIf="account" novalidate>
                 <div class="form-group">
@@ -103,9 +108,13 @@
                 </div>
 
                 <button type="submit" [disabled]="settingsForm.invalid" class="btn btn-primary" jhiTranslate="settings.form.button">Save</button>
-                <button type="button" [routerLink]="['../picture', account.login]" id="addPicture" class="btn btn-primary">
+                <button type="button" *ngIf!='profilePicture' [routerLink]="['../picture', account.login]" id="addPicture" class="btn btn-primary">
                     <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="register.form.addPicture">Add profile picture</span>
                 </button>
+                <button type="button" *ngIf='profilePicture' [routerLink]="['../picture', account.login]" id="addPicture" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="register.form.changePicture">Change profile picture</span>
+                </button>
+
             </form>
         </div>
     </div>

@@ -12,9 +12,10 @@ import { PasswordResetFinishComponent } from './password-reset/finish/password-r
 import { SettingsComponent } from './settings/settings.component';
 import { accountState } from './account.route';
 import { PictureComponent } from './picture/picture.component';
+import { ImageCropperModule } from 'ngx-image-cropper';
 
 @NgModule({
-  imports: [Skate02SharedModule, RouterModule.forChild(accountState)],
+  imports: [ImageCropperModule, Skate02SharedModule, RouterModule.forChild(accountState)],
   declarations: [
     ActivateComponent,
     RegisterComponent,

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { SERVER_API_URL } from 'app/app.constants';
 import { createRequestOption, Pagination } from 'app/shared/util/request-util';
 import { IUser } from './user.model';
+import { IPictureDTO } from './pictureDTO.model';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -14,6 +15,10 @@ export class UserService {
 
   create(user: IUser): Observable<IUser> {
     return this.http.post<IUser>(this.resourceUrl, user);
+  }
+
+  addPicture(pictureDTO: IPictureDTO): Observable<IUser> {
+    return this.http.post<IUser>(this.resourceUrl + '/picture', pictureDTO);
   }
 
   update(user: IUser): Observable<IUser> {
