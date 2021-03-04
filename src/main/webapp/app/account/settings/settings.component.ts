@@ -17,8 +17,9 @@ export class SettingsComponent implements OnInit {
   profilePicture?: string;
   settingsForm = this.fb.group({
     firstName: [undefined, [Validators.required, Validators.minLength(1), Validators.maxLength(50)]],
-    lastName: [undefined, [Validators.required, Validators.minLength(1), Validators.maxLength(50)]],
-    email: [undefined, [Validators.required, Validators.minLength(5), Validators.maxLength(254), Validators.email]],
+    lastName: [undefined, [Validators.minLength(1), Validators.maxLength(50)]],
+    phone: [undefined, [Validators.required, Validators.minLength(9), Validators.maxLength(13)]],
+    email: [undefined, [Validators.minLength(5), Validators.maxLength(254), Validators.email]],
     langKey: [undefined],
   });
 
@@ -32,6 +33,7 @@ export class SettingsComponent implements OnInit {
           firstName: account.firstName,
           lastName: account.lastName,
           email: account.email,
+          phone: account.login,
           langKey: account.langKey,
         });
 
@@ -46,6 +48,7 @@ export class SettingsComponent implements OnInit {
     this.account.firstName = this.settingsForm.get('firstName')!.value;
     this.account.lastName = this.settingsForm.get('lastName')!.value;
     this.account.email = this.settingsForm.get('email')!.value;
+    this.account.phone = this.settingsForm.get('phone')!.value;
     this.account.langKey = this.settingsForm.get('langKey')!.value;
 
     this.accountService.save(this.account).subscribe(() => {

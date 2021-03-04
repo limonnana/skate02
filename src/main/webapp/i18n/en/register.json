@@ -9,10 +9,10 @@
     "messages": {
       "validate": {
         "login": {
-          "required": "Your username is required.",
-          "minlength": "Your username is required to be at least 1 character.",
-          "maxlength": "Your username cannot be longer than 50 characters.",
-          "pattern": "Your username is invalid."
+          "required": "Your phone is required.",
+          "minlength": "Your phone is required to be at least 9 character.",
+          "maxlength": "Your phone cannot be longer than 13 characters.",
+          "pattern": "Your phone is invalid."
         }
       },
       "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",

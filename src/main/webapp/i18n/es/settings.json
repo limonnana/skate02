@@ -6,6 +6,8 @@
       "firstname.placeholder": "Su nombre",
       "lastname": "Apellidos",
       "lastname.placeholder": "Sus apellidos",
+      "phone": "Telefono",
+      "phone.placeholder": "Tu telefono",
       "language": "Idioma",
       "button": "Guardar"
     },
@@ -25,6 +27,11 @@
           "required": "Se requiere que ingrese sus apellidos.",
           "minlength": "Se requiere que sus apellidos tengan por lo menos 1 caracter",
           "maxlength": "Sus apellidos no pueden tener más de 50 caracteres"
+        },
+        "phone": {
+          "required": "Tu telefono es campo obligatorio.",
+          "minlength": "Se requiere que tu teléfono tenga al menos 9 caracteres",
+          "maxlength": "Tu teléfono no puede tener más de 13 caracteres"
         }
       }
     }
