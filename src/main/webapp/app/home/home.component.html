@@ -1,12 +1,14 @@
 <div class="row">
     <div class="col-md-3">
         <span class="hipster img-fluid rounded"></span>
+        hola
     </div>
 
     <div class="col-md-9">
-        <h1 class="display-4" jhiTranslate="home.title">Welcome, Skater!</h1>
-
-       
+        <h3 class="display-5"> {{event?.name}}</h3>
+  
+        <h3 class="display-7">Spot: {{event?.spot?.name}}</h3>
+        
 
         <div [ngSwitch]="isAuthenticated()">
             <div class="alert alert-success" *ngSwitchCase="true">
