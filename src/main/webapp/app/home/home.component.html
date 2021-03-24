@@ -1,14 +1,58 @@
 <div class="row">
     <div class="col-md-3">
-        <span class="hipster img-fluid rounded"></span>
-        hola
+        <div *ngIf='isPhotoBig1'>
+            <img [src]='photoBig1' class="img-thumbnail"> 
+        </div>     
+          
     </div>
 
     <div class="col-md-9">
         <h3 class="display-5"> {{event?.name}}</h3>
   
         <h3 class="display-7">Spot: {{event?.spot?.name}}</h3>
-        
+
+        <br><br><br>
+        <h4>Tricks</h4>
+
+        <div class="table-responsive" id="entities" *ngIf="tricks && tricks.length > 0">
+            <table class="table table-striped" aria-describedby="page-heading">
+                <thead>
+                    <tr>
+                        
+                        <th scope="col" ><span>Name</span></th>
+                        <th scope="col" ><span>Current Amount</span></th>
+                        <th scope="col" ><span>Target Amount</span></th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let trick of tricks">
+                        <td>{{ trick.name }}</td>
+                        <td>{{ trick.currentAmount }}</td>
+                        <td>{{ trick.objectiveAmount }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br><br>
+        <h4>Players</h4>
+
+        <div class="table-responsive" id="entities" *ngIf="players && players.length > 0">
+            <table class="table table-striped" aria-describedby="page-heading">
+                <thead>
+                    <tr>
+                        <th scope="col" ><span>Name</span></th>
+                        <th scope="col" ><span>Country</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let player of players" >
+                       <td>{{ player.user?.firstName}} &nbsp; {{ player.user?.lastName }}</td>
+                     <td>{{ player.user?.country }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <div [ngSwitch]="isAuthenticated()">
             <div class="alert alert-success" *ngSwitchCase="true">
