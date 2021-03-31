@@ -1,7 +1,12 @@
 {
   "picture": {
     "title": "Add Picture",
-    "addPicture": "Add profile picture",
+    "addPicture": "Add picture",
     "savePicture": "Save picture"
+  },
+  "profilePicture": {
+    "title": "Add profile picture",
+    "addProfilePicture": "Add profile picture ",
+    "savePicture": "Guardar foto"
   }
 }

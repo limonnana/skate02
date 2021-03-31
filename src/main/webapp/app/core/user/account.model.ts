@@ -9,6 +9,8 @@ export class Account {
     public phone: string,
     public login: string,
     public imageUrl: string,
-    public picture: string
+    public picture: string,
+    public profilePicture: string,
+    public country: string
   ) {}
 }

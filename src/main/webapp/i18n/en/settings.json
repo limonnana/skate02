@@ -8,6 +8,8 @@
       "lastname.placeholder": "Your last name",
       "phone": "Phone",
       "phone.placeholder": "Your Phone",
+      "country": "Country",
+      "country.placeholder": "Country",
       "language": "Language",
       "button": "Save"
     },

@@ -3,8 +3,8 @@
     "title": "Registration",
     "form": {
       "button": "Register",
-      "addPicture": "Add profile picture",
-      "changePicture": "Change profile picture"
+      "addPicture": "Add picture",
+      "changePicture": "Change  picture"
     },
     "messages": {
       "validate": {

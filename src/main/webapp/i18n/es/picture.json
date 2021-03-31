@@ -1,7 +1,12 @@
 {
   "picture": {
+    "title": "Agregar foto ",
+    "addPicture": "Agregar foto  ",
+    "savePicture": "Guardar foto"
+  },
+  "profilePicture": {
     "title": "Agregar foto de perfil",
-    "addPicture": "Agregar foto de perfil",
+    "addProfilePicture": "Agregar foto de perfil ",
     "savePicture": "Guardar foto"
   }
 }

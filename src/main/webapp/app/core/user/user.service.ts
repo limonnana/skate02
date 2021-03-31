@@ -17,6 +17,10 @@ export class UserService {
     return this.http.post<IUser>(this.resourceUrl, user);
   }
 
+  addProfilePicture(pictureDTO: IPictureDTO): Observable<IUser> {
+    return this.http.post<IUser>(this.resourceUrl + '/profilepicture', pictureDTO);
+  }
+
   addPicture(pictureDTO: IPictureDTO): Observable<IUser> {
     return this.http.post<IUser>(this.resourceUrl + '/picture', pictureDTO);
   }

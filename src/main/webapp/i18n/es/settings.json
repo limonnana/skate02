@@ -8,6 +8,8 @@
       "lastname.placeholder": "Sus apellidos",
       "phone": "Telefono",
       "phone.placeholder": "Tu telefono",
+      "country": "Pais",
+      "country.placeholder": "Pais",
       "language": "Idioma",
       "button": "Guardar"
     },

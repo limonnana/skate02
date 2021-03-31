@@ -5,6 +5,8 @@ import { JhiLanguageService } from 'ng-jhipster';
 import { AccountService } from 'app/core/auth/account.service';
 import { Account } from 'app/core/user/account.model';
 import { LANGUAGES } from 'app/core/language/language.constants';
+import { Router } from '@angular/router';
+// import { Login } from 'app/core/login/login.model';
 
 @Component({
   selector: 'jhi-settings',
@@ -14,26 +16,36 @@ export class SettingsComponent implements OnInit {
   account!: Account;
   success = false;
   languages = LANGUAGES;
+  pPicture = '../content/images/default-user-avatar.jpg';
+  picture?: string;
   profilePicture?: string;
   settingsForm = this.fb.group({
     firstName: [undefined, [Validators.required, Validators.minLength(1), Validators.maxLength(50)]],
     lastName: [undefined, [Validators.minLength(1), Validators.maxLength(50)]],
     phone: [undefined, [Validators.required, Validators.minLength(9), Validators.maxLength(13)]],
     email: [undefined, [Validators.minLength(5), Validators.maxLength(254), Validators.email]],
+    country: [undefined],
     langKey: [undefined],
   });
 
-  constructor(private accountService: AccountService, private fb: FormBuilder, private languageService: JhiLanguageService) {}
+  constructor(
+    private accountService: AccountService,
+    private fb: FormBuilder,
+    private languageService: JhiLanguageService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.accountService.identity().subscribe(account => {
       if (account) {
-        this.profilePicture = account.picture;
+        this.picture = account.picture;
+        this.profilePicture = account.profilePicture;
         this.settingsForm.patchValue({
           firstName: account.firstName,
           lastName: account.lastName,
           email: account.email,
           phone: account.login,
+          country: account.country,
           langKey: account.langKey,
         });
 
@@ -49,6 +61,7 @@ export class SettingsComponent implements OnInit {
     this.account.lastName = this.settingsForm.get('lastName')!.value;
     this.account.email = this.settingsForm.get('email')!.value;
     this.account.phone = this.settingsForm.get('phone')!.value;
+    this.account.country = this.settingsForm.get('country')!.value;
     this.account.langKey = this.settingsForm.get('langKey')!.value;
 
     this.accountService.save(this.account).subscribe(() => {

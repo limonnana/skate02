@@ -13,6 +13,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { accountState } from './account.route';
 import { PictureComponent } from './picture/picture.component';
 import { ImageCropperModule } from 'ngx-image-cropper';
+import { ProfilePictureComponent } from './profile-picture/profile-picture.component';
 
 @NgModule({
   imports: [ImageCropperModule, Skate02SharedModule, RouterModule.forChild(accountState)],
@@ -25,6 +26,7 @@ import { ImageCropperModule } from 'ngx-image-cropper';
     PasswordResetFinishComponent,
     SettingsComponent,
     PictureComponent,
+    ProfilePictureComponent,
   ],
 })
 export class AccountModule {}
