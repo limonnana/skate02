@@ -8,18 +8,23 @@
 
             <jhi-alert-error></jhi-alert-error>
           
-                <div>
-                    <a [routerLink]="['../profilepicture', account.login]">
+            <a [routerLink]="['../profilepicture', account.login]">
+                <div *ngIf='profilePicture == null || profilePicture == undefined'>
+                    <img [src]="pPicture" style="width: 20%;text-align:center;margin-left: auto;
+                    margin-right: auto;
+                    display: block; border-radius: 90%;"> 
+                </div>   
+                <div *ngIf='profilePicture'>
                     <img [src]="profilePicture" style="width: 20%;text-align:center;margin-left: auto;
                     margin-right: auto;
-                    display: block; border-radius: 90%;border:3px solid gray;"> 
-                    </a>
-
-                    <br> 
+                    display: block; border-radius: 90%;border:2px solid gray;"> 
                 </div>
+            </a>
 
                 <div *ngIf='picture'>
+                    <a [routerLink]="['../picture', account.login]">
                     <img [src]="picture" class="img-thumbnail"> 
+                    </a>
                       <br> <br>
                 </div>
 
@@ -151,7 +156,7 @@
 
                 <button type="submit" [disabled]="settingsForm.invalid" class="btn btn-primary" jhiTranslate="settings.form.button">Save</button>
                 <button type="button" *ngIf="picture == undefined || picture == '' || picture == null" [routerLink]="['../picture', account.login]" id="addPicture" class="btn btn-primary">
-                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="register.form.addPicture">Add picture</span>
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="register.form.addPicture">Add action picture</span>
                 </button>
                 <button type="button" *ngIf='picture' [routerLink]="['../picture', account.login]" id="addPicture" class="btn btn-primary">
                     <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="register.form.changePicture">Change profile picture</span>

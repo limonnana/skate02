@@ -1,17 +1,29 @@
-<div class="row">
-    <div class="col-md-3">
-        <div *ngIf='isPhotoBig1'>
-            <img [src]='photoBig1' class="img-thumbnail"> 
-        </div>     
-          
-    </div>
+<div *ngIf='isPhotoBig1'>
+ <img [src]='photoBig1'style="width: 100%;" class="img-fluid"> 
+</div>     
+        
+            <br><br><br>
 
-    <div class="col-md-9">
-        <h3 class="display-5"> {{event?.name}}</h3>
-  
-        <h3 class="display-7">Spot: {{event?.spot?.name}}</h3>
 
-        <br><br><br>
+            <section class="contact-section bg-black">
+                <div class="container">
+
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0" *ngFor="let trick of tricks">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">{{ trick.name }}</h4>
+                            <hr class="my-4" />
+                            <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </section>
+<br><br><br>
+
         <h4>Tricks</h4>
 
         <div class="table-responsive" id="entities" *ngIf="tricks && tricks.length > 0">
@@ -73,7 +85,6 @@
 
        
 
-    </div>
-</div>
+
 
 

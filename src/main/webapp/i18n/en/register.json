@@ -3,7 +3,7 @@
     "title": "Registration",
     "form": {
       "button": "Register",
-      "addPicture": "Add picture",
+      "addPicture": "Add Action picture",
       "changePicture": "Change  picture"
     },
     "messages": {

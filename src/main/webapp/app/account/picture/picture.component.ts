@@ -47,8 +47,8 @@ export class PictureComponent implements OnInit {
   }
 
   private onSaveSuccess(): void {
-    this.previousState();
-    // this.router.navigate(['/account/settings']);
+    // this.previousState();
+    this.router.navigate(['']);
   }
 
   private onSaveError(): void {}

@@ -6,7 +6,6 @@ import { AccountService } from 'app/core/auth/account.service';
 import { Account } from 'app/core/user/account.model';
 import { LANGUAGES } from 'app/core/language/language.constants';
 import { Router } from '@angular/router';
-// import { Login } from 'app/core/login/login.model';
 
 @Component({
   selector: 'jhi-settings',
@@ -19,6 +18,8 @@ export class SettingsComponent implements OnInit {
   pPicture = '../content/images/default-user-avatar.jpg';
   picture?: string;
   profilePicture?: string;
+  counter = 0;
+
   settingsForm = this.fb.group({
     firstName: [undefined, [Validators.required, Validators.minLength(1), Validators.maxLength(50)]],
     lastName: [undefined, [Validators.minLength(1), Validators.maxLength(50)]],
@@ -73,5 +74,12 @@ export class SettingsComponent implements OnInit {
         this.languageService.changeLanguage(this.account.langKey);
       }
     });
+  }
+
+  reloadComponent(): void {
+    const currentUrl = this.router.url;
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate([currentUrl]);
   }
 }
