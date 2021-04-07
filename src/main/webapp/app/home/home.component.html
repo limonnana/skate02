@@ -15,7 +15,9 @@
                             <i class="fas fa-map-marked-alt text-primary mb-2"></i>
                             <h4 class="text-uppercase m-0">{{ trick.name }}</h4>
                             <hr class="my-4" />
-                            <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                            <div class="small text-black-50">{{ trick.currentAmount }} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; {{ trick.objectiveAmount }} </div>
+                            <br>
+                            <div><a href="{{ trick.id }}" >Tip {{ trick.name }}</a></div>
                         </div>
                     </div>
                 </div>
@@ -24,27 +26,7 @@
             </section>
 <br><br><br>
 
-        <h4>Tricks</h4>
-
-        <div class="table-responsive" id="entities" *ngIf="tricks && tricks.length > 0">
-            <table class="table table-striped" aria-describedby="page-heading">
-                <thead>
-                    <tr>
-                        
-                        <th scope="col" ><span>Name</span></th>
-                        <th scope="col" ><span>Current Amount</span></th>
-                        <th scope="col" ><span>Target Amount</span></th>
-                       
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let trick of tricks">
-                        <td>{{ trick.name }}</td>
-                        <td>{{ trick.currentAmount }}</td>
-                        <td>{{ trick.objectiveAmount }}</td>
-                </tr>
-            </tbody>
-        </table>
+       
 
         <br><br><br>
         <h4>Players</h4>
