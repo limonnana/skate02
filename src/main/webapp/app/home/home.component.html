@@ -17,7 +17,7 @@
                             <hr class="my-4" />
                             <div class="small text-black-50">{{ trick.currentAmount }} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; {{ trick.objectiveAmount }} </div>
                             <br>
-                            <div><a href="{{ trick.id }}" >Tip {{ trick.name }}</a></div>
+                            <div><a [routerLink]="['/tip', trick.name]" >Tip me !! </a> ({{ trick.name }})</div>
                         </div>
                     </div>
                 </div>
