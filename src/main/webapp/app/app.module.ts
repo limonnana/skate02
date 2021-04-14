@@ -6,6 +6,7 @@ import { Skate02CoreModule } from 'app/core/core.module';
 import { Skate02AppRoutingModule } from './app-routing.module';
 import { Skate02HomeModule } from './home/home.module';
 import { TipModule } from './tip/tip.module';
+import { PlayerModule } from './player/player.module';
 import { Skate02EntityModule } from './entities/entity.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { MainComponent } from './layouts/main/main.component';
@@ -22,6 +23,7 @@ import { ErrorComponent } from './layouts/error/error.component';
     Skate02CoreModule,
     Skate02HomeModule,
     TipModule,
+    PlayerModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     Skate02EntityModule,
     Skate02AppRoutingModule,

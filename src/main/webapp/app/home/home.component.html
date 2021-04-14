@@ -29,24 +29,7 @@
        
 
         <br><br><br>
-        <h4>Players</h4>
-
-        <div class="table-responsive" id="entities" *ngIf="players && players.length > 0">
-            <table class="table table-striped" aria-describedby="page-heading">
-                <thead>
-                    <tr>
-                        <th scope="col" ><span>Name</span></th>
-                        <th scope="col" ><span>Country</span></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let player of players" >
-                       <td>{{ player.user?.firstName}} &nbsp; {{ player.user?.lastName }}</td>
-                     <td>{{ player.user?.country }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+       
 
         <div [ngSwitch]="isAuthenticated()">
             <div class="alert alert-success" *ngSwitchCase="true">
