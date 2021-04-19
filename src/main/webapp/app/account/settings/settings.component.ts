@@ -74,6 +74,7 @@ export class SettingsComponent implements OnInit {
         this.languageService.changeLanguage(this.account.langKey);
       }
     });
+    this.router.navigate(['']);
   }
 
   reloadComponent(): void {
