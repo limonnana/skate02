@@ -16,6 +16,15 @@
                             <h4 class="text-uppercase m-0">{{ trick.name }}</h4>
                             <hr class="my-4" />
                             <div class="small text-black-50">{{ trick.currentAmount }} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; {{ trick.objectiveAmount }} </div>
+                            <div class="small text-black-50">
+                                
+                                <table style="width:100%; border: 1px solid black;">
+                                    <tr style="height: 2px;">
+                                      <td *ngFor="let seccion of trick.secciones" style="border: 1px solid black;"> &nbsp; </td>
+                                    </tr>
+                                  </table>
+                            
+                            </div>
                             <br>
                             <div><a [routerLink]="['/tip', trick.name]" >Tip me !! </a> ({{ trick.name }})</div>
                         </div>

@@ -11,6 +11,7 @@ import { IPhoto } from 'app/shared/model/photo.model';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { IPlayer } from 'app/shared/model/player.model';
 import { ITrick } from 'app/shared/model/trick.model';
+import { ISeccion } from 'app/shared/model/seccion.model';
 
 @Component({
   selector: 'jhi-home',
@@ -25,6 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   photos?: IPhoto[];
   players?: IPlayer[];
   tricks?: ITrick[];
+  secciones?: ISeccion[];
   base64textString?: string;
   photoBig1?: SafeResourceUrl;
   isPhotoBig1 = false;
