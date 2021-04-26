@@ -1,6 +1,18 @@
 /* ==========================================================================
 Main page styles
 ========================================================================== */
+.Progress {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  border-radius: 6px;
+}
+
+.seccion {
+  height: 4px;
+  background-color: aqua;
+  border-radius: 2px;
+}
 
 .hipster {
   display: inline-block;

@@ -6,6 +6,8 @@ export interface ITrick {
   objectiveAmount?: number;
   currentAmount?: number;
   secciones?: ISeccion[];
+  percentageCovered?: number;
+  percentageToGo?: number;
 }
 
 export class Trick implements ITrick {
@@ -14,6 +16,8 @@ export class Trick implements ITrick {
     public name?: string,
     public objectiveAmount?: number,
     public currentAmount?: number,
-    public secciones?: ISeccion[]
+    public secciones?: ISeccion[],
+    public percentageCovered?: number,
+    public percentageToGo?: number
   ) {}
 }
