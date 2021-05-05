@@ -21,13 +21,15 @@
                                         <td>
                                             <table style="width: 100%;">
                                                 <tr>
-                                                    <td style="width: 15%;">0</td>  <td style="width: 70%;">{{ trick.currentAmount }}</td>  <td style="width: 15%;">{{ trick.objectiveAmount }}</td>
+                                                    <td style="width: 15%;text-align: left;">0</td>  <td style="width: 70%;"> {{ trick.currentAmount }}</td>  <td style="width: 15%;text-align: right;">{{ trick.objectiveAmount }}</td>
                                                 </tr>
                                             </table>              
                                 <table class="Progress">
                                       <tr> 
-                                           <td *ngFor="let seccion of trick.secciones" class="seccion"></td>
-                                           <td  [style.width]="40"></td>
+                                        <!-- span  *ngFor="let seccion of trick.secciones" -->
+                                        <td [style.width.%]="seccion.porcentaje" *ngFor="let seccion of trick.secciones;"class="seccion"> </td>
+                                       
+                                        <td [style.width.%]="10" class="toGo"></td>
                                         </tr>
                                    
                                 </table>

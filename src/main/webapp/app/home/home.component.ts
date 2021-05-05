@@ -64,6 +64,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.photos = this.event!.spot!.photos;
     this.players = this.event!.players;
     this.tricks = this.event!.tricks;
+    // this.secciones = this.event!.tricks!;
     this.getPhotoSrc();
   }
 
@@ -110,5 +111,13 @@ export class HomeComponent implements OnInit, OnDestroy {
       photo3 = 'data:image/png;base64,' + photo3;
       this.photoMedium3 = this.transform(photo3);
     }
+  }
+
+  getStyleWidth(seccionId: string | undefined): any {
+    return {
+      style: {
+        width: '10%',
+      },
+    };
   }
 }

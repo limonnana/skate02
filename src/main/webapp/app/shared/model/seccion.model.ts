@@ -1,4 +1,5 @@
 import { IUser } from '../../core/user/user.model';
+import { IStyleCss } from './styleCss.model';
 
 export interface ISeccion {
   id?: string;
