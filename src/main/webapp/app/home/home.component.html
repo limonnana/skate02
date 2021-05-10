@@ -21,18 +21,23 @@
                                         <td>
                                             <table style="width: 100%;">
                                                 <tr>
-                                                    <td style="width: 15%;text-align: left;">0</td>  <td style="width: 70%;"> {{ trick.currentAmount }}</td>  <td style="width: 15%;text-align: right;">{{ trick.objectiveAmount }}</td>
+                                                    <td style="width: 5%;text-align: left;">0</td>  <td [style.width.%]="trick.percentageCovered" style="text-align: right;"> {{ trick.currentAmount }}</td> <td [style.width.%]="trick.percentageToGo"></td> <td style="width: 3%;text-align: right;">{{ trick.objectiveAmount }}</td>
                                                 </tr>
-                                            </table>              
-                                <table class="Progress">
+                                            </table>  
+                                            <table style="width: 100%;">
+                                                <tr>
+                                                  <td [style.width.%]="trick.percentageCovered" class="seccion"></td> <td [style.width.%]="trick.percentageToGo" class="toGo"></td> 
+                                                </tr>
+                                            </table>             
+                                <!-- table class="Progress">
                                       <tr> 
-                                        <!-- span  *ngFor="let seccion of trick.secciones" -->
+                                        <!-- span  *ngFor="let seccion of trick.secciones" >
                                         <td [style.width.%]="seccion.porcentaje" *ngFor="let seccion of trick.secciones;"class="seccion"> </td>
                                        
                                         <td [style.width.%]="10" class="toGo"></td>
                                         </tr>
                                    
-                                </table>
+                                </table -->
                             </td>
                             </tr>
                             </table>
