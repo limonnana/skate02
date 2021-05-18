@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   isPhotoMedium2 = false;
   photoMedium3?: SafeResourceUrl;
   isPhotoMedium3 = false;
+  showText = false;
 
   constructor(
     private accountService: AccountService,
@@ -111,13 +112,5 @@ export class HomeComponent implements OnInit, OnDestroy {
       photo3 = 'data:image/png;base64,' + photo3;
       this.photoMedium3 = this.transform(photo3);
     }
-  }
-
-  getStyleWidth(seccionId: string | undefined): any {
-    return {
-      style: {
-        width: '10%',
-      },
-    };
   }
 }
