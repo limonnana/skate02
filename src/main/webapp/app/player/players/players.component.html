@@ -2,8 +2,8 @@
         <div class="title">Skaters</div>
 
         <div class="section" *ngIf="players">
-            <div class="terms" *ngFor="let player of players" >
-                      <a [routerLink]="['/skater', player.user?.id]">{{ player.user?.firstName}} &nbsp; {{ player.user?.lastName }}</a>
+            <div class="terms" *ngFor="let player of players;" >
+                      <a [routerLink]="['/skater', player.id]">{{ player.user?.firstName}} &nbsp; {{ player.user?.lastName }}</a>
              </div>
         <div>     
                 

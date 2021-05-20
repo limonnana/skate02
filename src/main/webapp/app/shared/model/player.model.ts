@@ -2,7 +2,7 @@ import { IUser } from '../../core/user/user.model';
 
 export interface IPlayer {
   id?: string;
-  user?: IUser;
+  user?: IUser | null;
 }
 
 export class Player implements IPlayer {
