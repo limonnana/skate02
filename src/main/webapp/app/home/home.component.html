@@ -29,23 +29,10 @@
                                                   <td [style.width.%]="trick.percentageCovered" class="seccion"></td> <td [style.width.%]="trick.percentageToGo" class="toGo"></td> 
                                                 </tr>
                                             </table>             
-                                <table style="width: 100%;">
-                                    <tr> 
-                                       
-                                    <td [style.width.%]="seccion.porcentaje" *ngFor="let seccion of trick.secciones;"> 
-                                        <div (mouseover)="showText=true" (mouseout)="showText=false">
-                                           &nbsp; <span *ngIf="showText">{{seccion.user!.firstName}} {{seccion.user!.lastName}}</span> &nbsp;
-                                        </div>
-
-                                    </td>
-                                       
-                                    <td></td>
+                              
+                                        </td>
                                     </tr>
-                                   
-                                </table -->
-                            </td>
-                            </tr>
-                            </table>
+                                </table>
                             
                             <br>
                             <div><a [routerLink]="['/tip', trick.name]" >Tip me !! </a> ({{ trick.name }})</div>
@@ -55,11 +42,8 @@
                 </div>
                 </div>
             </section>
-<br><br><br>
-
-       
-
-        <br><br><br>
+            
+        <br><br><br><br><br><br>
        
 
         <div [ngSwitch]="isAuthenticated()">

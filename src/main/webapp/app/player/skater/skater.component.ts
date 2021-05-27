@@ -14,6 +14,8 @@ export class SkaterComponent implements OnInit {
   id?: string | null = null;
   player: IPlayer | null = null;
   user?: IUser | null = null;
+  picture?: string;
+  profilePicture?: string;
 
   constructor(protected activatedRoute: ActivatedRoute, protected skateService: SkateService) {}
 
@@ -22,6 +24,8 @@ export class SkaterComponent implements OnInit {
     this.skateService.find(this.id!).subscribe((res: HttpResponse<IPlayer>) => {
       this.player = res.body;
       this.user = this.player?.user;
+      this.picture = this.player?.user?.picture;
+      this.profilePicture = this.player?.user?.profilePicture;
     });
     // this.playerService.query().subscribe((res: HttpResponse<IPlayer[]>) => (this.players = res.body || []));
   }

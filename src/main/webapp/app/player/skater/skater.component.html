@@ -1,9 +1,27 @@
-<table style="width: 100%;">
+<table style="width: 60%;">
     <tr>
-        <td>{{user?.firstName}} {{user?.lastName}}</td>
+        <td style="text-align:center;">{{user?.firstName}} {{user?.lastName}}</td>
+        <td>
+            <img [src]="profilePicture" style="width: 25%;text-align:left;margin-left: 0;
+            margin-right: auto;
+            display: block; border-radius: 90%;border:2px solid gray;">
+         </td>
     </tr>
     <tr>
-        <td> Country: {{user?.country}}</td>
+        <td>&nbsp;</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="text-align:center;"> Country:</td>
+        <td>{{user?.country}}Israel</td>
     </tr>
 </table>
+<br><br>
+<div *ngIf='picture'>
+   
+    <img [src]="picture" style="width: 50%;
+     border:2px solid gray;"> 
+    
+      <br> <br>
+</div>
 

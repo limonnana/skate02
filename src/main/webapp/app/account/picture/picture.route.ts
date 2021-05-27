@@ -7,7 +7,7 @@ export const pictureRoute: Route = {
   path: 'picture/:login',
   component: PictureComponent,
   data: {
-    authorities: [Authority.USER],
+    authorities: [Authority.USER, Authority.ADMIN],
     pageTitle: 'picture.title',
   },
   canActivate: [UserRouteAccessService],
