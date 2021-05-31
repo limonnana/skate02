@@ -6,7 +6,7 @@
 
 
             <section class="contact-section bg-black">
-                <div class="container">
+            <div class="container">
 
             <div class="row">
                 <div class="col-md-4 mb-3 mb-md-0" *ngFor="let trick of tricks">
@@ -29,20 +29,22 @@
                                                   <td [style.width.%]="trick.percentageCovered" class="seccion"></td> <td [style.width.%]="trick.percentageToGo" class="toGo"></td> 
                                                 </tr>
                                             </table>             
-                              
-                                        </td>
+                                          </td>
                                     </tr>
                                 </table>
                             
                             <br>
-                            <div><a [routerLink]="['/tip', trick.name]" >Tip me !! </a> ({{ trick.name }})</div>
+                            <div><a [routerLink]="['/tip', trick.name]" >Tip me !! </a> </div>
                         </div>
+                        <div class="contributors"><a [routerLink]="['/contributors', trick.id]" >Tips</a></div> 
                     </div>
+                    
                 </div>
                 </div>
                 </div>
+
             </section>
-            
+
         <br><br><br><br><br><br>
        
 
