@@ -15,7 +15,7 @@
           "pattern": "Your username is invalid."
         }
       },
-      "success": "<strong>¡Registro guardado!</strong> Por favor, revise su correo electrónico para confirmar.",
+      "success": "<strong>¡Registro guardado!</strong> Ahora puede autenticarse como usuario, gracias.",
       "error": {
         "fail": "<strong>¡El registro ha fallado!</strong> Por favor, inténtelo de nuevo más tarde.",
         "userexists": "<strong>¡Ese telefono ya está registrado!</strong> Por favor, escoja otro telefono o recupere la contrasena.",

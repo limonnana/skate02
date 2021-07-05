@@ -15,7 +15,7 @@
           "pattern": "Your phone is invalid."
         }
       },
-      "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",
+      "success": "<strong>Registration saved!</strong> You are welcome to login now.",
       "error": {
         "fail": "<strong>Registration failed!</strong> Please try again later.",
         "userexists": "<strong>Phone already registered!</strong> Please choose another one or recover your password.",

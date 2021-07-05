@@ -23,13 +23,12 @@
 
                 <div *ngIf='picture'>
                     <a [routerLink]="['../picture', account.login]">
-                    <img [src]="picture" class="img-thumbnail"> 
+                    <img [src]="picture" class="img-fluid"> 
                     </a>
                       <br> <br>
                 </div>
 
-              <button (click)="reloadComponent()">Refresh Picture Reload Page</button>  
-
+            --> To Refresh Picture Reload Page <br><br>
             <form name="form" role="form" (ngSubmit)="save()" [formGroup]="settingsForm" *ngIf="account" novalidate>
                 <div class="form-group">
                     <label class="form-control-label" for="firstName" jhiTranslate="settings.form.firstname">First Name</label>
